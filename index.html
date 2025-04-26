@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Manipulation App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
+  </head>
+  <body>
+    <h1>Image Manipulation App</h1>
+    <div class="screenActions">
+      <!-- Canvases -->
+      <div class="canvas-container">
+        <canvas id="c1"></canvas>
+        <canvas id="c2"></canvas>
+      </div>
+      <br />
+
+      <!-- Foreground Image -->
+      <label for="fgimage" class="custom-button">Choose Foreground Image</label>
+      <input
+        type="file"
+        id="fgimage"
+        onchange="getFgImage()"
+        accept="image/*"
+        style="display: none"
+      />
+      <span id="fgimage-text">No file chosen</span>
+      <br />
+
+      <!-- Background Image -->
+      <label for="bgimage" class="custom-button">Choose Background Image</label>
+      <input
+        type="file"
+        id="bgimage"
+        onchange="getBgImage()"
+        accept="image/*"
+        style="display: none"
+      />
+      <span id="bgimage-text">No file chosen</span>
+      <br />
+
+      <!-- Buttons -->
+      <input type="button" onclick="mergeImages()" value="Merge Images" />
+      <input
+        type="button"
+        onclick="resetApp()"
+        value="Try Again"
+        style="display: none"
+        id="try-again-btn"
+      />
+      <input
+        type="button"
+        onclick="saveImage()"
+        value="Save Image"
+        style="display: none"
+        id="save-image-btn"
+      />
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
