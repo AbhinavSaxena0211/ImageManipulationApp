@@ -1,8 +1,29 @@
 body {
-  background-color: rgb(198, 199, 200);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5ed, #2193b0);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
 }
-
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.screenActions {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
 h1 {
   text-align: center;
 }
@@ -56,3 +77,4 @@ span {
 .hidden {
   display: none !important;
 }
+
